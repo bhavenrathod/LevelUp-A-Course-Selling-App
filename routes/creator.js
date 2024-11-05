@@ -1,39 +1,40 @@
 const { Router } = require("express");
-const adminRouter = Router();
+const creatorRouter = Router();
+const { creatorModel } = require("../db");
 
-adminRouter.post("/signup", function (req, res) {
+creatorRouter.post("/signup", function (req, res) {
   res.json({
     message: "admin signup success",
   });
 });
 
-adminRouter.post("/signin", function (req, res) {
+creatorRouter.post("/signin", function (req, res) {
   res.json({
     message: "admin signin success",
   });
 });
 
 // course creation
-adminRouter.post("/course", function (req, res) {
+creatorRouter.post("/course", function (req, res) {
   res.json({
     message: "course creation",
   });
 });
 
 // update course
-adminRouter.put("/course", function (req, res) {
+creatorRouter.put("/course", function (req, res) {
   res.json({
     message: "course creation",
   });
 });
 
 // get all course
-adminRouter.get("/course/all", function (req, res) {
+creatorRouter.get("/course/all", function (req, res) {
   res.json({
     message: "course creation",
   });
 });
 
 module.exports = {
-  adminRouter: adminRouter,
+  creatorRouter: creatorRouter,
 };

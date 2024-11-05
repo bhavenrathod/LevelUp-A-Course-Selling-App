@@ -1,4 +1,5 @@
 const { Router } = require("express"); // destructure the object here
+const { userModel } = require("../db");
 
 const userRouter = Router(); // use the function here
 
